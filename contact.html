@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>Meghan Duprey</title>
+        <script src="scripts/myScript.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body class="site">
@@ -30,19 +32,19 @@
                     </section>
 
                     <section class="card">
-                        <a href="https://meghanmduprey.wordpress.com/" target="_blank"><img src="/assets/wordpressgreen.png" width="80" height="80" alt="twitter logo"></a>
+                        <a href="https://meghanmduprey.wordpress.com/" target="_blank"><img src="assets/wordpressgreen.png" width="80" height="80" alt="WordPress logo"></a>
                         <a href="https://meghanmduprey.wordpress.com/" target="_blank"><h2>Blog</h2></a>
                     </section>
                     <section class="card">
-                        <a href="https://www.instagram.com/meghanduprey/" target="_blank"><img src="/assets/instagram.png" width="80" height="80" alt="Instagram logo"></a>
+                        <a href="https://www.instagram.com/meghanduprey/" target="_blank"><img src="assets/instagram.png" width="80" height="80" alt="Instagram logo"></a>
                         <a href="https://www.instagram.com/meghanduprey/" target="_blank"><h2>Instagram</h2></a>
                     </section>
                 </article>
                 <section class="contact-form">
-                    <form method="POST" action="https://formspree.io/meghan.duprey@gmail.com">
+                    <form method="POST" action="https://formspree.io/meghan.duprey@gmail.com" name="contact" onsubmit="return validate()">
                         <input type="text" name="name" placeholder="Your name">
-                        <input type="email" name="email" placeholder="Your email" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <input type="email" name="email" placeholder="Your email">
+                        <textarea name="message" placeholder="Your Message"></textarea>
                         <button type="submit">Email Me!</button>
                     </form>
                 </section>

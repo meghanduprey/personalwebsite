@@ -95,8 +95,6 @@ header .navigation {
     color:  #fefefe;
     display: inline;
     font-family: 'Dawning of a New Day', cursive;
-
-
     font-size: 50px;
     margin-top: 50px;
 /*    padding: 20px;*/
@@ -198,7 +196,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox=
     width: 250px;
 }
 .card h2 {
-    font-family: GloriaHallelujah, cursive;
+    font-family: 'Gloria Hallelujah', cursive;
     font-size: 20px;
     margin-left: 10px;
 }
@@ -260,17 +258,17 @@ button {
 input:invalid {
     color: #f00;
 }
-input:required {
+input[type="email"] {
       border-left: 2px solid #ff0000;
 }
 input:required:focus {
   border: 1px solid red;
   outline: none;
 }
-textarea:required {
+textarea {
     border-left: 2px solid #ff0000;
 }
-textarea:required:focus {
+textarea:focus {
     border: 1px solid red;
     outline: none;
 }
