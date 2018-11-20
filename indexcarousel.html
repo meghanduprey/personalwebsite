@@ -3,26 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>Meghan Duprey</title>
-    <style>
-         /**************CAROUSEL**************/
-        #slideshow-container {
-            display: flex;
-            justify-content: center;
-            min-height: 280px;  
-          }
-        figure {
-        }
-        figure img {
-            
-        }
-        figcaption {
-            text-align: center;
-        }
-      </style>
+    <script src="scripts/myScript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/styles.css">
     <script>
         var index = 0;
-        var images = new Array("assets/diploma-compressor.jpg", "assets/meWIthACane-compressor.jpg", "assets/meAndTaffy-compressor.jpg", "assets/skydiving.jpg");
-
+        var images = new Array("assets/ss/diploma-compressor.jpg", 
+                               "assets/ss/meWIthACane-compressor.jpg", 
+                               "assets/ss/meAndTaffy-compressor.jpg", 
+                               "assets/ss/skydiving.jpg", 
+                               "assets/ss/blues.jpg", 
+                               "assets/ss/camphope.jpg", 
+                               "assets/ss/desert.jpg", 
+                               "assets/ss/halloween.jpg", 
+                               "assets/ss/helmet.jpg", 
+                               "assets/ss/kayak2.jpg", 
+                               "assets/ss/movember.jpg", 
+                               "assets/ss/nugget.jpg", 
+                               "assets/ss/saudi.jpg", 
+                               "assets/ss/statueofliberty.jpg", 
+                               "assets/ss/warriorride.jpg ");
+        var caption = new Array("Me getting my diploma from the MMM Program at Syracuse                               University",
+                                "My service dog, Taffy, and I at a Warrior Ride event",
+                                "My dogs, Taffy and Nugget, and I at Camp Unleashed",
+                                "Skydiving!",
+                                "Me and my mom",
+                                "Camp Hope Unleashed",
+                                "Deployed to Pakistan in 2003",
+                                "We love Halloween!",
+                                "On a mission in Iraq",
+                                "Kayaking with Taffy",
+                                "Movember with Moose",
+                                "Nugget!",
+                                "Deployment to Saudi Arabia spring 2001",
+                                "On our way to see the Statue of Liberty!",
+                                "Me and Jess at a Warrior Ride event");
         function previous() {
             if (index == 0) {
                 index = images.length;
@@ -31,6 +49,7 @@
             index--;
 
             document.getElementById("slideshow").src = images[index];
+            document.getElementById("caption").src = caption[index];
             return false;
         }
         function next() {
@@ -41,24 +60,88 @@
             }
 
             document.getElementById("slideshow").src = images[index];
+            document.getElementById("caption").src = caption[index];
             return false;
         }
     </script>
-    <body>
+  </head>
+  <body class="site">
     <div class="wrapper">
+        <header>
+            <nav class="navigation">
+                <h1 class="logo">Meghan Duprey</h1>
+                <ul>
+                    <li  class="active"><a href="index.html">Home</a></li>
+                    <li>&middot;</li>
+                    <li class=""><a href="doing_stuff.html">I'm Doing Stuff</a></li>
+                    <li>&middot;</li>
+                    <li class=""><a href="https://meghanmduprey.wordpress.com/" target="_blank">Blog</a></li>
+                    <li>&middot;</li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>  
+        </header>
 
-            <!------------ Slideshow  ---------->
+        <main class="site-content">
+            <h1>Who Am I?</h1>
             
-            <section id="slideshow-container">
-                <figure class="slideshow-outer">
-                <img src="assets/diploma-compressor.jpg" width="222" alt="current picture in gallery" id="slideshow">
-                <figcaption>
-                    <a href= "javascript:void()"; onclick="previous()" class="previous round">&#8249;</a>
-                    <a href="javascript:void()" onclick="next()" class="next round">&#8250;</a></figcaption>
+           <section class="heroImage center">
+                <figure>
+                    <img src="assets/meAndTheGirls-compressor.jpg" alt= "Meghan in Iraq with little girls">
+                    <figcaption>Me hanging out with some little girls on a mission in Iraq in 2008</figcaption>
                 </figure>
             </section>
-       
+            <section class="card intro"> 
+                <ul>
+                    <li>I’m a <span class="green">student</span> at Asheville-Buncombe Technical Community College <br>in the Software and Web Development Program.</li> 
+
+                    <li>I’m a <span class="green">veteran</span>.</li>
+
+                    <li>I’m a <span class="green">dog lover</span> and an <span class="green">amateur gardener</span>.</li>
+
+                    <li>I’m an <span class="green">idealist</span> and I have the <strong>dogged determination</strong> to achieve my goals.</li>
+                </ul>
+            </section>
+<!--
+            <section class="flex-container">
+                <figure class="center">
+                    <img src="assets/diploma-compressor.jpg" alt= "Meghan with Syracuse University Military Multimedia Program diploma">
+                    <figcaption>Me with my diploma from <br>Syracuse University's Military <br>Motion Media Program in 2007</figcaption>
+                </figure>
+                <figure class="center">
+                    <img src="assets/meAndTaffy-compressor.jpg" alt= "Meghan and Taffy at Camp Unleashed">
+                    <figcaption>Me and my dogs, Taffy and <br>Nugget, at Camp Unleashed<br> in 2016</figcaption>
+                </figure>
+                <figure class="center">
+                    <img src="assets/meWIthACane-compressor.jpg", alt="Meghan walking with a cane with her service dog, Taffy">
+                    <figcaption>Me at a Warrior Ride event <br>with my service dog, Taffy, <br>in 2010.</figcaption>
+                </figure>
+          </section>
+-->
+           <section class="slideshow-container">
+                <figure class="slideshow-outer">
+                    <img src="assets/ss/diploma-compressor.jpg" height="222" alt="current picture in gallery" id="slideshow">
+                    <figcaption>
+                       <p id="caption"></p>
+                        <button type="button" onclick="previous()" class="previous">&#8249;</button>
+                        <button type="button"  onclick="next()" class="next">&#8250;</button>
+                    </figcaption>
+                </figure>
+            </section>
+            <article> 
+                <h2>My Why</h2>
+                <section class="card intro">
+                <p>In a world where it can feel like we have no control, my goal is to help people realize their agency again through web and software driven community engagement.</p>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <nav class="topnav inline" id="myTopnav">
+                <a href="index.html"><img src="assets/copyright.png" alt="copyright" width="24" height="24"> MeghanDuprey.com 2018</a>
+                <a href="https://meghanmduprey.wordpress.com/" target="_blank"><img src="assets/wordpresswhite.png" alt="wordpress logo" width="36px" height="36px"></a>
+                <a href="https://github.com/meghanduprey" target="_blank"><img src="assets/githubwhite.png" alt="github logo" width="35px" height="35px"></a>
+            </nav>
+        </footer>
     </div>
   </body>
-</html>
-      
+</html>      

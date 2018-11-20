@@ -185,20 +185,21 @@ figure img {
 .slideshow-container figcaption {
     text-align: center;
 }
-.slideshow-container figcaption a {
-    padding: 10px 18px;
+.slideshow-container figcaption button {
+    display: inline-block;
+    padding: 5px 15px;
 }
 .previous {
     background-color: #7b8f8d;
     color: #fff;
+    font-size: 50px;
 }
 .next {
     background-color: #7b8f8d;
     color: #fff;
+    font-size: 50px;
 }
-.round {
-    border-radius: 50%;
-}
+
 /**************ACCORDION*************/
 .ui-icon {
     display: none;
