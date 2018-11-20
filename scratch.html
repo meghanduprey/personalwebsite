@@ -1,0 +1,98 @@
+<figure class="center">
+                    <img src="assets/diploma-compressor.jpg" alt= "Meghan with Syracuse University Military Multimedia Program diploma">
+                    <figcaption>Me with my diploma from <br>Syracuse University's Military <br>Motion Media Program in 2007</figcaption>
+                </figure>
+                <figure class="center">
+                    <img src="assets/meAndTaffy-compressor.jpg" alt= "Meghan and Taffy at Camp Unleashed">
+                    <figcaption>Me and my dogs, Taffy and <br>Nugget, at Camp Unleashed<br> in 2016</figcaption>
+                </figure>
+                <figure class="center">
+                    <img src="assets/meWIthACane-compressor.jpg", alt="Meghan walking with a cane with her service dog, Taffy">
+                    <figcaption>Me at a Warrior Ride event <br>with my service dog, Taffy, <br>in 2010.</figcaption>
+                </figure>
+                
+                
+                
+                /*
+.left {
+    clear:both;
+    float: left;
+    padding: 0 20px 20px 20px;
+}
+*/
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Meghan Duprey</title>
+    <script src="scripts/myScript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/styles.css">
+      <style>
+    
+      </style>
+  </head>
+  <body class="site">
+    <div class="wrapper">
+        
+            <section class="carousel-outer">
+                <section class="carousel">
+                    <div><span>1</span></div>
+                    <div><span>2</span></div>
+                    <div><span>3</span></div>
+                    <div><span>4</span></div>
+                    <div><span>5</span></div>
+                    <div><span>6</span></div>
+                    <div><span>7</span></div>
+                    <div><span>8</span></div>
+                    <div><span>9</span></div>
+                </section>
+                <span class="arrow left"><</span>
+                <span class="arrow right">></span>
+            </section>
+    </div>
+  </body>
+</html>
+
+
+REALLY simple slider 
+
+<script>
+    var i = 0; //start point
+    
+    var images = [];
+    
+    var time = 5000;
+    //Image list
+    
+    images[0] = "assets/meAndTaffy-compressor.jpg";
+    images[1] = "assets/meAndTheGirls-compressor.jpg";
+    images[2] = "assets/meWIthACane-compressor.jpg";
+    images[3] = "assets/meAndTheGirls-compressor.jpg";
+    
+    // Change Image
+    function changeImg(){
+        document.slide.src = images[i];
+
+        // Check If Index Is Under Max
+        if(i < images.length - 1){
+          // Add 1 to Index
+          i++; 
+        } else { 
+            // Reset Back To O
+            i = 0;
+        }
+
+	// Run function every x seconds
+	setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload=changeImg;
+</script>
