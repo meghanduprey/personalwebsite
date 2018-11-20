@@ -3,14 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Meghan Duprey</title>
-    <script src="scripts/myScript.js"></script>
-    <script src="scripts/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="scripts/ui/jquery-ui.min.css">
-    <script src="scripts/ui/jquery-ui.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">  
-    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+         /**************CAROUSEL**************/
+        #slideshow-container {
+            display: flex;
+            justify-content: center;
+            min-height: 280px;  
+          }
+        figure {
+        }
+        figure img {
+            
+        }
+        figcaption {
+            text-align: center;
+        }
+      </style>
     <script>
         var index = 0;
         var images = new Array("assets/diploma-compressor.jpg", "assets/meWIthACane-compressor.jpg", "assets/meAndTaffy-compressor.jpg", "assets/skydiving.jpg");
@@ -36,44 +44,9 @@
             return false;
         }
     </script>
-<body>
+    <body>
     <div class="wrapper">
-        <header>
-          <nav class="navigation">
-            <h1 class="logo">Meghan Duprey</h1>
-            <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li>&middot;</li>
-                    <li><a href="doing_stuff.html">I'm Doing Stuff</a></li>
-                    <li>&middot;</li>
 
-                    <li class=""><a href="https://meghanmduprey.wordpress.com/" target="_blank">Blog</a></li>
-                    <li>&middot;</li>
-
-                    <li class=""><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>  
-        </header>
-        <main class="site-content">
-            <h1>Who Am I?</h1>
-            
-           <section class="heroImage center">
-                <figure>
-                    <img src="assets/meAndTheGirls-compressor.jpg" alt= "Meghan in Iraq with little girls">
-                    <figcaption>Me hanging out with some little girls on a mission in Iraq in 2008</figcaption>
-                </figure>
-            </section>
-            <section class="card intro"> 
-                <ul>
-                    <li>I’m a <span class="green">student</span> at Asheville-Buncombe Technical Community College <br>in the Software and Web Development Program.</li> 
-
-                    <li>I’m a <span class="green">veteran</span>.</li>
-
-                    <li>I’m a <span class="green">dog lover</span> and an <span class="green">amateur gardener</span>.</li>
-
-                    <li>I’m an <span class="green">idealist</span> and I have the <strong>dogged determination</strong> to achieve my goals.</li>
-                </ul>
-            </section>
             <!------------ Slideshow  ---------->
             
             <section id="slideshow-container">
@@ -84,14 +57,7 @@
                     <a href="javascript:void()" onclick="next()" class="next round">&#8250;</a></figcaption>
                 </figure>
             </section>
-        </main>
-        <footer>
-            <nav class="inline">
-                <a href="index.html"><img src="assets/copyright.png" alt="copyright" width="24" height="24"> MeghanDuprey.com 2018</a>
-                <a href="https://meghanmduprey.wordpress.com/" target="_blank"><img src="assets/wordpresswhite.png" alt="wordpress logo" width="36px" height="36px"></a>
-                <a href="https://github.com/meghanduprey" target="_blank"><img src="assets/githubwhite.png" alt="github logo" width="35px" height="35px"></a>
-            </nav>
-        </footer>
+       
     </div>
   </body>
 </html>
