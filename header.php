@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meghan Duprey</title>
     <script src="scripts/myScript.js"></script>
     <script src="scripts/jquery-3.3.1.min.js"></script>
@@ -16,6 +17,9 @@
             $("#widgets").accordion({ collapsible: true });
         });
     </script>
+    <style>
+        .mySlides {display:none;}
+    </style>
 
   </head>
   <body>
@@ -26,11 +30,11 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li>&middot;</li>
-                    <li><a href="doing_stuff.php">I'm Doing Stuff</a></li>
+                    <li><a href="#doing_stuff">I'm Doing Stuff</a></li>
                     <li>&middot;</li>
                     <li class=""><a href="https://meghanmduprey.wordpress.com/" target="_blank">Blog</a></li>
                     <li>&middot;</li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
