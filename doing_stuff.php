@@ -1,39 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Meghan Duprey</title>
-    <script src="scripts/myScript.js"></script>
-    <script src="scripts/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="scripts/ui/jquery-ui.min.css">
-    <script src="scripts/ui/jquery-ui.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script>
-        $( function() {
-            $("#widgets").accordion({ collapsible: true });
-        });
-    </script>
+<?php include 'header.php'; ?>
 
-  </head>
-  <body>
-    <div class="wrapper">
-        <header>
-            <nav class="navigation">
-                <h1 class="logo">Meghan Duprey</h1>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>&middot;</li>
-                    <li  class="active"><a href="doing_stuff.html">I'm Doing Stuff</a></li>
-                    <li>&middot;</li>
-                    <li class=""><a href="https://meghanmduprey.wordpress.com/" target="_blank">Blog</a></li>
-                    <li>&middot;</li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
         <main>
             <h1>What am I up to?</h1>
             <hr>
@@ -73,13 +39,13 @@
                 </section>
             </article>
         </main>
-        <footer>
-            <nav class="topnav inline" id="myTopnav">
-                <a href="index.html"><img src="assets/copyright.png" alt="copyright" width="24" height="24"> MeghanDuprey.com 2018</a>
-                <a href="https://meghanmduprey.wordpress.com/" target="_blank"><img src="assets/wordpresswhite.png" alt="wordpress logo" width="36" height="36"></a>
-                <a href="https://github.com/meghanduprey" target="_blank"><img src="assets/githubwhite.png" alt="github logo" width="35" height="35"></a>
-            </nav>
-        </footer>
-    </div>
-    </body>
+        <footer role="contentinfo">
+        <nav class="topnav inline" id="myTopnav">
+            <a href="index.html"><img src="assets/copyrightscaled.png" alt="copyright" width="24" height="24"> MeghanDuprey.com 2018</a>
+            <a href="https://meghanmduprey.wordpress.com/" target="_blank"><img src="assets/wordpresswhitescaled.png" alt="wordpress logo" width="36" height="36"></a>
+            <a href="https://github.com/meghanduprey" target="_blank"><img src="assets/githubwhitescaled.png" alt="github logo" width="35" height="35"></a>
+        </nav>
+    </footer>
+</div>
+</body>
 </html>

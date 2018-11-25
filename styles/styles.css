@@ -70,7 +70,7 @@ header .navigation {
     display: inline;
     padding: 1px 3px 1px 0;
 }
-.navigation .active {
+a:active {
     background-color: #7b8f8d;
     border-radius: 5px;
     color: white;
