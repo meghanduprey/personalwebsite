@@ -46,6 +46,9 @@ hr {
     margin: 100px;
  	width: 80%;
 }
+ul {
+    list-style-type: none;
+}
 footer {
     background-color: #444;
     border-radius: 0 0 5px 5px;
@@ -283,8 +286,7 @@ figure img {
     font-size: 20px;
     margin-left: 10px;
 }
-.card a:hover>h2 {
-    font-weight: bold;
+.card a:hover {
     text-decoration: underline;
 }
 /***************CONTACT FORM**************/
