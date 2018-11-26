@@ -23,7 +23,6 @@ header {
 nav a:hover {
     background-color: #f4f4f5;
     color: #444;
-    text-transform: uppercase;
   }
 h1,
 h2,
@@ -148,10 +147,6 @@ a:active {
 .intro li {
     padding: 10px;
 }
-.green {
-    color: #7b8f8d;
-    font-weight: bold;
-}
 .flex-container {
     align-content: center;
     display: flex;
@@ -159,6 +154,9 @@ a:active {
 /*    height: 400px;*/
     justify-content: space-around;
   }
+.flex-container .center {
+    width: 250px;
+}
 .center {
     text-align: center;
 }
@@ -232,21 +230,25 @@ figure img {
     font-size: 50px;
 }
 .next {
-    background-color: #7b8f8d;
+    background-color: 
     color: #fff;
     font-size: 50px;
 }
 
 /**************ACCORDION*************/
+#widgets {
+    margin: 0 auto;
+    width: 80%;
+}
 #widgets h3 {
     font-size: 20px;
-    font-weight: bold;
 }
 .ui-icon {
     display: none;
 }
 .ui-accordion .ui-accordion-header {
-    text-align: center;
+    padding-left: 30px;
+    text-align: left;
 }
 .ui-widget {
     font-size: 16px;
@@ -255,7 +257,10 @@ figure img {
     color: #7b8f8d;
     text-decoration: underline;
 }       
-
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: none;
+    background-color: rgba(123, 143, 141, .1);
+}
 /**************CONTACT STYLES**************/
 .contact {
     background-color: #ffffff;
@@ -278,9 +283,9 @@ figure img {
     font-size: 20px;
     margin-left: 10px;
 }
-.card a:hover {
+.card a:hover>h2 {
+    font-weight: bold;
     text-decoration: underline;
-    text-transform: uppercase;
 }
 /***************CONTACT FORM**************/
 .contact-form {

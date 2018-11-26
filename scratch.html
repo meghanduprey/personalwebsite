@@ -119,8 +119,83 @@ figData: [
 
 
 
+<!--        Slideshow script-->
+   <!-- -----------------SLIDESHOW------------------->
+<!--
+           <section class="slideshow-container">
+                <figure class="slideshow-outer">
+                    <img id="figure-image" alt="" width="222">
+                    <figcaption id="figure-caption"></figcaption>
+                </figure>
+                <div id="controls">
+                    <button id="figure-previous-button" type="button" onclick="previous()" class="previous">&#8249;</button>
+                    <button id="figure-next-button" type="button"  onclick="next()" class="next">&#8250;</button>
+                </div>
+            </section>
+-->
 
-
-
+   <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+          var index = 0;
+          var figNextBtn = null;
+          var figPrevBtn = null;
+          var figImage = null;
+          var figCaption = null;
+          var slideShow = {
+            figData: [
+                { caption: "Getting my diploma from the MMM Program at Syracuse University", src: "assets/ss/diploma-compressor.jpg"},
+                { caption: "Me and my service dog, Taffy, at a Warrior Ride event", src: "assets/ss/meWIthACane-compressor.jpg" },
+                { caption: "Me and my mom", src: "assets/ss/blues.jpg" },
+                { caption: "Camp Hope Unleashed", src: "assets/ss/camphope.jpg" },
+                { caption: "Deployed to Pakistan in 2003", src: "assets/ss/desert.jpg" },
+                { caption: "On a mission in Iraq", src: "assets/ss/helmet.jpg" },
+                { caption: "Deployment to Saudi Arabia", src: "assets/ss/saudi.jpg" },
+                { caption: "Me and Jess at a Warrior Ride event", src: "assets/ss/warriorride.jpg" }
+            ],
+            init: function() {
+              figNextBtn = document.getElementById("figure-next-button");
+              figPrevBtn = document.getElementById("figure-previous-button");
+              figImage = document.getElementById("figure-image");
+              figCaption = document.getElementById("figure-caption");
+              figNextBtn.addEventListener('click', function(){
+                slideShow.goNext();
+              });
+              figPrevBtn.addEventListener('click', function(){
+                slideShow.goPrevious();
+              });
+              this.updateOutput(0);
+            },
+            goNext: function() {
+              index = (index >= this.figData.length - 1)? 0 : index+1;
+              this.updateOutput(index);
+            },
+            goPrevious: function() {
+              index = (index == 0)? this.figData.length - 1 : index-1;
+              this.updateOutput(index);
+            },
+            updateOutput: function(currentIndex){
+              figImage.src = this.figData[currentIndex].src;
+              figCaption.innerHTML = this.figData[currentIndex].caption;
+            }
+          };
+          slideShow.init();
+        });
+      </script>
+      <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
 
 
